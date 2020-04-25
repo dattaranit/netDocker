@@ -14,7 +14,7 @@ namespace ngNetDocker.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "Ranit", "Surita" };
+            return new string[] { "R", "S" };
         }
 
         // GET api/values/5

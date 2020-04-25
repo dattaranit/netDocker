@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ngnetdock-deployment
+spec:
+  selector:
+    matchLabels:
+      app: ngnetdock-pod
+  template:
+    metadata:
+      labels:
+        app: ngnetdock-pod
+    spec:
+      containers:
+        - name: ngnetdock-container
+          image: dattaranit/ngnetdocker:v3
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 80
